@@ -1,0 +1,7 @@
+<h1>Список записей:</h1>
+<div *ngIf="dataRecords$ | async as dataRecords">
+  <app-data-record-table [dataRecords]="dataRecords"></app-data-record-table>
+</div>
+
+<h4 class="mt-4">Отправка новых данных:</h4>
+<app-data-records-form (onSubmit)="refresh()"></app-data-records-form>
